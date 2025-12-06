@@ -1,30 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- This is a COMPLETE, STANDALONE HTML FILE -->
+  <!-- Save this file as: index.html -->
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baby Lambs Gallery</title>
+  <title>DeepThoughts – Baby Lambs Gallery</title>
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       padding: 0;
-      background: #000;
+      background: #050505;
+      color: #f5f5f5;
+      font-family: Arial, Helvetica, sans-serif;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 20px;
+      min-height: 100vh;
     }
-    img {
-      width: 90%;
-      max-width: 800px;
+    header {
+      padding: 16px 20px;
+      border-bottom: 1px solid #333;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    main {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .gallery {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+    }
+    .gallery img {
+      width: 100%;
       height: auto;
+      border-radius: 10px;
+      border: 3px solid #f5f5f5;
       display: block;
+    }
+    .caption {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin-top: 4px;
+      text-align: center;
+    }
+    footer {
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 0.8rem;
+      border-top: 1px solid #333;
+      opacity: 0.7;
     }
   </style>
 </head>
+
 <body>
-  <img src="flock11.png" alt="flock11">
-  <img src="flock22.png" alt="flock22">
-  <img src="flock33.png" alt="flock33">
+
+  <header>
+    <h1>DeepThoughts – Baby Lambs Gallery</h1>
+  </header>
+
+  <main>
+    <div class="gallery">
+
+      <!-- ========== IMAGE SLOT 1 ========== -->
+      <!-- Put a file in the SAME folder as this index.html named EXACTLY: flock11.png -->
+      <div>
+        <img src="flock11.png" alt="Baby lamb image 1">
+        <div class="caption">Image 1 – flock11.png</div>
+      </div>
+
+      <!-- ========== IMAGE SLOT 2 ========== -->
+      <!-- Put a file in the SAME folder as this index.html named EXACTLY: flock22.png -->
+      <div>
+        <img src="flock22.png" alt="Baby lamb image 2">
+        <div class="caption">Image 2 – flock22.png</div>
+      </div>
+
+      <!-- ========== IMAGE SLOT 3 ========== -->
+      <!-- Put a file in the SAME folder as this index.html named EXACTLY: flock33.png -->
+      <div>
+        <img src="flock33.png" alt="Baby lamb image 3">
+        <div class="caption">Image 3 – flock33.png</div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    &copy; <span id="year">2025</span> DeepThoughts – Stone
+  </footer>
+
+  <script>
+    // Just keeps the year in the footer up to date. Not required for images to work.
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
